@@ -1,0 +1,20 @@
+PODS:
+  - SnapKit (5.0.1)
+  - ZHBaseKit_Swift (2.0.0):
+    - SnapKit
+
+DEPENDENCIES:
+  - ZHBaseKit_Swift
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+    - ZHBaseKit_Swift
+
+SPEC CHECKSUMS:
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  ZHBaseKit_Swift: 3a87de8781ae4066e2940c4ca5e004b1eb9f76af
+
+PODFILE CHECKSUM: ba1b6828c704f8c141a5353dd9d88fa5b19adbcb
+
+COCOAPODS: 1.11.2
