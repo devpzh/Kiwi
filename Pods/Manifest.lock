@@ -1,20 +1,24 @@
 PODS:
+  - Alamofire (5.6.4)
   - SnapKit (5.0.1)
   - ZHBaseKit_Swift (2.0.0):
     - SnapKit
 
 DEPENDENCIES:
+  - Alamofire
   - ZHBaseKit_Swift
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - SnapKit
     - ZHBaseKit_Swift
 
 SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   ZHBaseKit_Swift: 3a87de8781ae4066e2940c4ca5e004b1eb9f76af
 
-PODFILE CHECKSUM: ba1b6828c704f8c141a5353dd9d88fa5b19adbcb
+PODFILE CHECKSUM: 9c3b568362885477430467b2d6056c04e4483ba0
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.12.0

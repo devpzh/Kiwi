@@ -16,6 +16,10 @@
 		305C05F9277D96E30019877D /* KiwiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C05F8277D96E30019877D /* KiwiTests.swift */; };
 		305C0603277D96E30019877D /* KiwiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C0602277D96E30019877D /* KiwiUITests.swift */; };
 		305C0605277D96E30019877D /* KiwiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C0604277D96E30019877D /* KiwiUITestsLaunchTests.swift */; };
+		3079151529C9A9D4009F852C /* Kiwi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079151429C9A9D4009F852C /* Kiwi.swift */; };
+		3079151729C9B403009F852C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079151629C9B403009F852C /* Request.swift */; };
+		3079151929CA977D009F852C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079151829CA977D009F852C /* Message.swift */; };
+		3079151D29CAA55A009F852C /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079151C29CAA55A009F852C /* Controller.swift */; };
 		850644F49C9383B856316692 /* Pods_Kiwi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF21AF6609B95B944A1978 /* Pods_Kiwi.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +54,10 @@
 		305C05FE277D96E30019877D /* KiwiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KiwiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		305C0602277D96E30019877D /* KiwiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiwiUITests.swift; sourceTree = "<group>"; };
 		305C0604277D96E30019877D /* KiwiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiwiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3079151429C9A9D4009F852C /* Kiwi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiwi.swift; sourceTree = "<group>"; };
+		3079151629C9B403009F852C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		3079151829CA977D009F852C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3079151C29CAA55A009F852C /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		A2DF21AF6609B95B944A1978 /* Pods_Kiwi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kiwi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60B5EAC60D3C8B2D1056DB5 /* Pods-Kiwi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kiwi.release.xcconfig"; path = "Target Support Files/Pods-Kiwi/Pods-Kiwi.release.xcconfig"; sourceTree = "<group>"; };
 		EBBF2BD24337061B706120DE /* Pods-Kiwi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kiwi.debug.xcconfig"; path = "Target Support Files/Pods-Kiwi/Pods-Kiwi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,7 +117,7 @@
 				305C05E1277D96E10019877D /* AppDelegate.swift */,
 				305C05E3277D96E10019877D /* SceneDelegate.swift */,
 				305C05E5277D96E10019877D /* ViewController.swift */,
-				305C0611277D98C80019877D /* Source */,
+				3079151329C9A635009F852C /* Source */,
 				305C05E7277D96E10019877D /* Main.storyboard */,
 				305C05EA277D96E30019877D /* Assets.xcassets */,
 				305C05EC277D96E30019877D /* LaunchScreen.storyboard */,
@@ -135,9 +143,13 @@
 			path = KiwiUITests;
 			sourceTree = "<group>";
 		};
-		305C0611277D98C80019877D /* Source */ = {
+		3079151329C9A635009F852C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3079151429C9A9D4009F852C /* Kiwi.swift */,
+				3079151629C9B403009F852C /* Request.swift */,
+				3079151829CA977D009F852C /* Message.swift */,
+				3079151C29CAA55A009F852C /* Controller.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -335,8 +347,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				305C05E6277D96E10019877D /* ViewController.swift in Sources */,
+				3079151529C9A9D4009F852C /* Kiwi.swift in Sources */,
+				3079151729C9B403009F852C /* Request.swift in Sources */,
+				3079151929CA977D009F852C /* Message.swift in Sources */,
 				305C05E2277D96E10019877D /* AppDelegate.swift in Sources */,
 				305C05E4277D96E10019877D /* SceneDelegate.swift in Sources */,
+				3079151D29CAA55A009F852C /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,8 +530,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8NMSK6FA9N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kiwi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -528,8 +547,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kuailebang.app.Kiwi;
+				PRODUCT_BUNDLE_IDENTIFIER = me.aidong.me;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = developer_meaidongme_profile_20230810;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -542,8 +563,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8NMSK6FA9N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kiwi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -556,8 +580,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kuailebang.app.Kiwi;
+				PRODUCT_BUNDLE_IDENTIFIER = me.aidong.me;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = developer_meaidongme_profile_20230810;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
