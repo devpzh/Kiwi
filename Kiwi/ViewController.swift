@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Kiwi.kw.dev_url = ""
+        Kiwi.kw.dev_url = "https://app.51aidong.com/"
         Kiwi.kw.environment = .DEV
     }
 
@@ -73,7 +73,7 @@ class TestController: Controller {
         
         switch msg.status! {
         case .SENDING:
-            HTTP(msg, "")
+            HTTP(msg, "shuhua/hardwares/0")
             break
         case .SUCCEED:
             break
@@ -92,7 +92,7 @@ extension Kiwi:KiwiErrorProtocol {
     public func kiwi(occurredError msg: Message) -> Bool {
         
         if let model = msg.map(Model.self) as? Model {
-           print("model:\(model.message)")
+           print("model:\(model.status)")
         }
         return false
     }
@@ -100,10 +100,8 @@ extension Kiwi:KiwiErrorProtocol {
 }
 
 class Model:Decodable {
-    let success:Bool?
-    let message:String?
-    let code:Int?
-    let data:SubModel?
+    let status:Int?
+//    let data:SubModel?
 }
 
 class SubModel:Model {

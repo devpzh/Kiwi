@@ -73,9 +73,7 @@ open class Request:NSObject {
     //MARK: Request
     private func request(method:HTTPMethod = .get, msg:Message, url:String){
         
-        let path = Kiwi.kw.url + url;
-        
-        AF.request(path,method: method,parameters: msg.input,encoding: JSONEncoding.default,headers: headers(msg)).responseDecodable { response in
+        AF.request(url,method: method,parameters: msg.input,encoding: JSONEncoding.default,headers: headers(msg)).responseDecodable { response in
             self.response(msg: msg, response: response)
         }
     }

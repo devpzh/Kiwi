@@ -15,11 +15,11 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = 'Kiwi'
+  spec.name         = 'KiwiAlamofire'
 
-  spec.version      = '1.0.0'
+  spec.version      = '1.1.0'
 
-  spec.summary      = 'Kiwi'
+  spec.summary      = 'KiwiAlamofire'
 
   spec.requires_arc = true
 
@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-                   Kiwi is a network library that depends on Alamofire
+                   KiwiAlamofire is a network library that depends on Alamofire
                    DESC
 
   spec.homepage     = 'https://github.com/devpzh/Kiwi.git'
