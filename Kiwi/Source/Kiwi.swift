@@ -27,7 +27,7 @@ open class Kiwi {
     public var release_url = ""
     
     //MARK: 当前url
-    var url = ""
+    public var url = ""
     
     //MARK: 开发环境
     public var environment:KiwiEnvironment = .RELEASE {
