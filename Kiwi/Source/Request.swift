@@ -8,8 +8,7 @@
 import UIKit
 import Alamofire
 
-public let API = Request.req;
-
+public let API = Request.req
 open class Request:NSObject {
     
     public enum RequestMethod {
@@ -17,8 +16,8 @@ open class Request:NSObject {
         case POST
         case DELETE
         case PUT
-        
-       public var method:HTTPMethod {
+        case PATCH
+        public var method:HTTPMethod {
             switch self {
             case .GET:
                 return .get
@@ -28,6 +27,8 @@ open class Request:NSObject {
                 return .delete
             case .PUT:
                 return .put
+            case .PATCH:
+                return .patch
             }
         }
     }
@@ -69,14 +70,16 @@ open class Request:NSObject {
     }
     
     public func HTTP(method:RequestMethod = .GET, msg:Message, url:String) {
-       request(method:method.method, msg: msg, url: url);
+
+       let encoding = (Kiwi.kw as? KiwiErrorProtocol)?.kiwi(method:method) ?? URLEncoding.default
+       request(method:method.method, msg: msg, url: url,encoding:encoding);
     }
     
     
     //MARK: Request
-    private func request(method:HTTPMethod = .get, msg:Message, url:String){
+    private func request(method:HTTPMethod = .get, msg:Message, url:String, encoding:ParameterEncoding = URLEncoding.default ){
         
-        AF.request(url,method: method,parameters: msg.input,encoding: URLEncoding.default,headers: headers(msg)).responseDecodable { response in
+        AF.request(url,method: method,parameters: msg.input,encoding:encoding,headers: headers(msg)).responseDecodable { response in
             self.response(msg: msg, response: response)
         }
     }

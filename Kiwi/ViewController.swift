@@ -87,6 +87,7 @@ class TestController: Controller {
 
 }
 
+import Alamofire
 extension Kiwi:KiwiErrorProtocol {
     
     public func kiwi(occurredError msg: Message) -> Bool {
@@ -95,6 +96,10 @@ extension Kiwi:KiwiErrorProtocol {
            print("model:\(model.status)")
         }
         return false
+    }
+    
+    public func kiwi(method: Request.RequestMethod) -> ParameterEncoding? {
+        return URLEncoding.default
     }
     
 }

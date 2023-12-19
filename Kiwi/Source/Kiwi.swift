@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 open class Kiwi {
     
@@ -68,6 +69,7 @@ open class Kiwi {
 //MARK: 统一错误处理
 public protocol KiwiErrorProtocol {
    func kiwi(occurredError msg:Message) -> Bool;
+   func kiwi(method:Request.RequestMethod) -> ParameterEncoding?;
 }
 
 extension NSObject
